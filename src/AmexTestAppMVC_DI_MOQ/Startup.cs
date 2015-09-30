@@ -93,6 +93,8 @@ namespace AmexTestAppMVC_DI_MOQ
             // Register application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+            
+            services.AddSingleton(_ => Configuration);
         }
 
         // Configure is called after ConfigureServices is called.

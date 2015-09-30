@@ -1,10 +1,11 @@
 {
-  "ApplicationInsights": {
-    "InstrumentationKey": "d36a3394-40cf-4528-ab8b-74e23dead7d8"
-  },
-  "Data": {
-    "DefaultConnection": {
-      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-AmexTestAppMVC_DI_MOQ-2847ccd5-8d66-4de6-a0c8-6cfcaad32d59;Trusted_Connection=True;MultipleActiveResultSets=true"
+    "ApplicationInsights": {
+        "InstrumentationKey": "d36a3394-40cf-4528-ab8b-74e23dead7d8"
+    },
+    "Data": {
+        "DefaultConnection": {
+            "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-AmexTestAppMVC_DI_MOQ-2847ccd5-8d66-4de6-a0c8-6cfcaad32d59;Trusted_Connection=True;MultipleActiveResultSets=true"
+        },
+    "DIMessage": "Dependency Injection Through IConfiguration"
     }
-  }
 }
