@@ -28,6 +28,18 @@ namespace AmexTestAppMVC_DI_MOQ.Controllers
             return View();
         }
 
+        public IActionResult WebServiceAbout()
+        {
+            //string messageFromWebservice = System.Net.WebRequest.Create("http://webapiresponse.azurewebsites.net/api/values").GetResponse().ToString();
+
+            //System.Net.WebClient client = new System.Net.WebClient();
+            //string messageFromWebservice = client.OpenRead("http://webapiresponse.azurewebsites.net/api/values").ToString();
+
+            ViewData["Message"] = "Message from http://webapiresponse.azurewebsites.net/api/values : "; //+ messageFromWebservice;//"Your application description page. And a Dependency Injected String: " + _config.Get("Data:DIMessage");
+
+            return View();
+        }
+
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
