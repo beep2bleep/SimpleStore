@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using System.Security.Claims;
-using System.Security.Principal;
 using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Mvc;
-using AmexTestAppMVC_DI_MOQ;
 using AmexTestAppMVC_DI_MOQ.Models;
 using AmexTestAppMVC_DI_MOQ.Services;
 

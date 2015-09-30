@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Mvc;
+﻿using Microsoft.AspNet.Mvc;
 using Microsoft.Framework.Configuration;
+using System.Net;
 
 namespace AmexTestAppMVC_DI_MOQ.Controllers
 {
@@ -30,12 +27,12 @@ namespace AmexTestAppMVC_DI_MOQ.Controllers
 
         public IActionResult WebServiceAbout()
         {
-            //string messageFromWebservice = System.Net.WebRequest.Create("http://webapiresponse.azurewebsites.net/api/values").GetResponse().ToString();
+            string url = "http://webapiresponse.azurewebsites.net/api/values";
+            WebClient clnt = new WebClient();
+            string strResponse = clnt.DownloadString(url);
 
-            //System.Net.WebClient client = new System.Net.WebClient();
-            //string messageFromWebservice = client.OpenRead("http://webapiresponse.azurewebsites.net/api/values").ToString();
-
-            ViewData["Message"] = "Message from http://webapiresponse.azurewebsites.net/api/values : "; //+ messageFromWebservice;//"Your application description page. And a Dependency Injected String: " + _config.Get("Data:DIMessage");
+            ViewData["Message"] = "Message from http://webapiresponse.azurewebsites.net/api/values : "+ strResponse;//"Your application description page. And a Dependency Injected String: " + _config.Get("Data:DIMessage");
+            
 
             return View();
         }
